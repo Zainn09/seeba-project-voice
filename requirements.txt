@@ -1,0 +1,3 @@
+# Speech-to-text engine (CTranslate2 Whisper). Brings its own audio
+# decoding via PyAV, so no system ffmpeg is required.
+faster-whisper>=1.0,<2

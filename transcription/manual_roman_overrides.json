@@ -1,0 +1,8 @@
+{
+  "_comment": "Manual Urdu -> Roman Urdu overrides; these always win over the learned dictionary. aik/kya follow the spelling conventions of the later document section (Voices 127-167: aik 32x vs ek 0x; kya also requested explicitly in the task). Add out-of-vocabulary words here after reviewing the QC report, then re-run: python3 transcription/transliterate.py build --holdout none && python3 transcription/build_output.py",
+  "ایک": "aik",
+  "کیا": "kya",
+  "تمھارا": "tumhara",
+  "تمھارے": "tumharay",
+  "تمھاری": "tumhari"
+}
