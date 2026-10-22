@@ -1,11 +1,10 @@
 {
-  "note": "MODEL TEST large-v3: Voices 1,2,484 have verified 1:1 human transcripts in docx (ground truth). 151/167/168 eyeball + numbering check. Compare with test_small.jsonl.",
+  "note": "FULL BATCH: every audio file Voice 151-500, large-v3 (test: ~90% Urdu word match vs 69% small). skip_existing=false because docx numbers in MP3 range do not match audio contents (verified 151/166). Test shards quarantined in results/tests/ so resume-pooling cannot skip files.",
   "model": "large-v3",
-  "only": "1,2,151,167,168,484",
-  "shard": "test_large",
+  "only": "",
   "start": 151,
   "end": 500,
-  "chunk_size": 42,
+  "chunk_size": 39,
   "language": "ur",
   "skip_existing": false
 }

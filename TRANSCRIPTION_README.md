@@ -8,9 +8,17 @@ Roman Urdu, preserving all existing work:
 - **`text_voices.docx` is never modified.** It actually contains **164**
   entries — Voices **1–162, 166 and 167** (only 163, 164, 165 are missing
   inside that range; Voice 13's Roman Urdu paragraph is blank in the
-  document). Those voices are therefore *skipped*, not re-transcribed.
-- New output is written to **new files** (below), one entry per remaining
-  audio file, in voice-number order.
+  document).
+- **Numbering warning (found by the §8 sample test):** in the MP3 range the
+  document's entry numbers do **not** match the same-numbered audio files.
+  E.g. `Voice151.mp3` actually speaks the text of docx entries ~157/158, and
+  `Voice166.mp3` is an audiobook intro that appears nowhere in the docx.
+  The early Ogg files do match (verified: Voice 1, 2 and 484=7). Because of
+  this offset, *every* audio file from 151 onward is transcribed from the
+  audio itself — docx entries are never used to skip a file, and never
+  overwritten either.
+- New output is written to **new files** (below), one entry per audio file
+  from 151 onward, in voice-number order.
 
 ## Repository facts found during inspection
 
@@ -65,10 +73,12 @@ states the exact status per voice.
 
 ### Option A — GitHub Actions (what was used here; no local GPU/setup)
 
-Actions ▸ **Transcribe voices (Whisper Urdu ASR)** ▸ *Run workflow* on this
-branch (defaults: model `small`, Voices 151–500, skip existing). Jobs run
-in parallel chunks and commit result shards back to the branch. Then,
-locally after pulling:
+Edit `transcription/run_request.json` (model, range, `skip_existing`, …)
+and push — that file is the workflow trigger (GitHub only allows the
+*Run workflow* button for workflows that exist on the default branch; the
+`workflow_dispatch` inputs in the workflow file work too once it is merged
+to `main`). Jobs run in parallel chunks and commit result shards back to
+the branch. Then, locally after pulling:
 
 ```bash
 python3 transcription/build_output.py

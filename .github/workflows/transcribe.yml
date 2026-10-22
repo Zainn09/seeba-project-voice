@@ -149,7 +149,7 @@ jobs:
           if-no-files-found: warn
 
   collect:
-    needs: transcribe
+    needs: [plan, transcribe]
     if: always() && needs.transcribe.result != 'skipped'
     runs-on: ubuntu-latest
     steps:

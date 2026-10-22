@@ -99,8 +99,8 @@ def main() -> int:
         f"Existing transcriptions in text_voices.docx: {len(existing_voices)} "
         f"(range {min(existing_voices)}..{max(existing_voices)}; gaps: "
         f"{[n for n in range(min(existing_voices), max(existing_voices)+1) if n not in existing_voices] or 'none'})",
-        f"Scope (>= {args.start}, audio present): {len(scope)} | already in docx (skipped): {len(already_in_doc)} {already_in_doc}",
-        f"New voices in output: {len(targets)}",
+        f"Scope (>= {args.start}, audio present): {len(scope)} | numbers that also exist in docx (content verified NOT to match on samples 151/166, still transcribed from audio): {already_in_doc}",
+        f"Voices in output: {len(targets)}",
         "",
         "voice | file | status | duration_s | avg_logprob | oov_rate | note",
     ]
