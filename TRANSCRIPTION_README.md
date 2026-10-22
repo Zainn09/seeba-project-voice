@@ -61,6 +61,9 @@ Roman Urdu, preserving all existing work:
 | File | Contents |
 |---|---|
 | `roman_urdu_transcriptions_151_onward.txt` | `Voice N — <filename>` + Roman Urdu paragraph, one entry per new voice |
+| `all_voices_roman_urdu_sentences.docx` | **Word document, all voices, Roman Urdu only, sentence by sentence** (numbered sentences). Part 1 = original docx entries, Part 2 = audio 151–500; 514 entries, 6,494 sentences. Regenerate: `python3 transcription/build_sentence_docx.py` |
+| `all_voices_roman_urdu_sentences.txt` | Plain-text mirror of the Word document above |
+| `roman_urdu_words.txt` | Unique Roman Urdu words only — alphabetical, one per line as `word — count` (4.7k words, counted across all sentences above) |
 | `roman_urdu_transcriptions_151_onward_with_urdu.txt` | Same entries with the Urdu-script ASR text above each Roman paragraph (mirrors the docx layout, for checking) |
 | `transcription/qc_report.txt` | Per-voice status, ASR confidence, OOV rate, duplicates, gaps, review list |
 | `transcription/results/*.jsonl` | Raw machine-readable ASR output (resume state) |

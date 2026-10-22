@@ -54,6 +54,20 @@ def split_sentences(text: str) -> list[str]:
     return [s.strip() for s in SPLIT_RE.split(text) if s.strip()]
 
 
+def roman_only(s: str, tr: Transliterator) -> str:
+    """Guarantee Latin script only. The original docx Roman text contains a
+    stray Arabic tanween ("nisbat\u0627\u064b"); map such remnants to Roman."""
+    if not re.search(r"[؀-ۿ]", s):
+        return s
+    s = s.replace("اً", "an").replace("ً", "n")
+
+    def _sub(m: re.Match) -> str:
+        roman, _ = tr.transliterate(m.group(0))
+        return roman
+
+    return re.sub(r"[؀-ۿ]+", _sub, s)
+
+
 def ensure_terminal(s: str) -> str:
     s = s.strip()
     return s if s.endswith((".", "?", "!")) else s + "."
@@ -65,6 +79,12 @@ def assemble(existing: dict, results: dict, files: dict, tr: Transliterator):
     for n in sorted(int(k) for k in existing):
         e = existing[str(n)]
         heading = e.get("heading") or f"Voice {n}"
+        if re.search(r"[؀-ۿ]", heading):
+            # Original headings carry Urdu titles ("Voice 23 — بارش کا موسم");
+            # this document is Roman-only, so transliterate the title part.
+            prefix, _, title = heading.partition("—")
+            roman_title, _ = tr.transliterate(title.strip())
+            heading = f"{prefix.strip()} — {roman_title}" if roman_title else prefix.strip()
         if e.get("roman"):
             sentences = [ensure_terminal(s) for s in split_sentences(e["roman"])]
             note = ""
@@ -97,6 +117,8 @@ def assemble(existing: dict, results: dict, files: dict, tr: Transliterator):
         if not sentences:
             sentences = ["[unclear]"]
         part2.append({"heading": heading, "note": "", "sentences": sentences})
+    for entry in part1 + part2:
+        entry["sentences"] = [roman_only(s, tr) for s in entry["sentences"]]
     return part1, part2
 
 
