@@ -80,6 +80,94 @@ def md5_of(path: Path) -> str:
     return h.hexdigest()
 
 
+
+def _run_asr(model, audio_path: str, language, beam_size: int, vad_filter: bool):
+    """Run Whisper once; return (text, segments, info_namespace)."""
+    segments, info = model.transcribe(
+        audio_path,
+        language=language,
+        task="transcribe",
+        beam_size=beam_size,
+        vad_filter=vad_filter,
+        vad_parameters={"min_silence_duration_ms": 500},
+        condition_on_previous_text=False,
+        word_timestamps=False,
+    )
+    seg_list = []
+    for s in segments:  # generator: inference happens here
+        seg_list.append({
+            "start": round(s.start, 2),
+            "end": round(s.end, 2),
+            "text": s.text.strip(),
+            "avg_logprob": round(s.avg_logprob, 3),
+            "no_speech_prob": round(s.no_speech_prob, 3),
+        })
+    return " ".join(s["text"] for s in seg_list).strip(), seg_list, info
+
+
+def salvage_ogg_opus_to_wav(src: Path, dst_wav: Path) -> float:
+    """Decode an Ogg/Opus file whose container the standard demuxer rejects.
+
+    Parses Ogg pages manually (ignoring page CRCs), reassembles Opus
+    packets and decodes them directly, writing 16 kHz mono WAV to dst_wav.
+    Returns salvaged duration in seconds (0.0 if not salvageable).
+    Needed for VOICE499.ogg / VOICE22.ogg: byte-identical files that
+    ffmpeg/PyAV refuse at demux level while every Opus packet is intact.
+    The original file is only read; dst_wav is a temporary file.
+    """
+    import array
+    import wave
+
+    import av  # ships with faster-whisper
+
+    data = src.read_bytes()
+    packets: list[bytes] = []
+    cur = bytearray()
+    pos = 0
+    while True:
+        j = data.find(b"OggS", pos)
+        if j < 0 or j + 27 > len(data):
+            break
+        nseg = data[j + 26]
+        if j + 27 + nseg > len(data):
+            break
+        segs = data[j + 27: j + 27 + nseg]
+        body_start = j + 27 + nseg
+        body = data[body_start: body_start + sum(segs)]
+        off = 0
+        for ln in segs:
+            cur += body[off: off + ln]
+            off += ln
+            if ln < 255:
+                packets.append(bytes(cur))
+                cur = bytearray()
+        pos = body_start + sum(segs)
+    if len(packets) < 3 or not packets[0].startswith(b"OpusHead"):
+        return 0.0
+    cc = av.CodecContext.create("opus", "r")
+    cc.extradata = packets[0]
+    res = av.AudioResampler(format="s16", layout="mono", rate=16000)
+    samples = array.array("h")
+    for pkt in packets[2:]:  # skip OpusHead / OpusTags
+        try:
+            for frame in cc.decode(av.Packet(pkt)):
+                for out in res.resample(frame):
+                    b = bytes(out.planes[0])
+                    a = array.array("h")
+                    a.frombytes(b[: len(b) // 2 * 2])
+                    samples.extend(a)
+        except Exception:
+            continue  # skip a genuinely damaged packet, keep the rest
+    if len(samples) < 16000:  # < 1 second: not worth it
+        return 0.0
+    with wave.open(str(dst_wav), "wb") as wf:
+        wf.setnchannels(1)
+        wf.setsampwidth(2)
+        wf.setframerate(16000)
+        wf.writeframes(samples.tobytes())
+    return len(samples) / 16000.0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--voices-dir", default="Voices")
@@ -195,26 +283,8 @@ def main() -> int:
                     })
                     counts["duplicate_reused"] += 1
                 else:
-                    segments, info = model.transcribe(
-                        str(path),
-                        language=language,
-                        task="transcribe",
-                        beam_size=args.beam_size,
-                        vad_filter=not args.no_vad,
-                        vad_parameters={"min_silence_duration_ms": 500},
-                        condition_on_previous_text=False,
-                        word_timestamps=False,
-                    )
-                    seg_list = []
-                    for s in segments:  # generator: inference happens here
-                        seg_list.append({
-                            "start": round(s.start, 2),
-                            "end": round(s.end, 2),
-                            "text": s.text.strip(),
-                            "avg_logprob": round(s.avg_logprob, 3),
-                            "no_speech_prob": round(s.no_speech_prob, 3),
-                        })
-                    text = " ".join(s["text"] for s in seg_list).strip()
+                    text, seg_list, info = _run_asr(model, str(path), language,
+                                                    args.beam_size, not args.no_vad)
                     rec.update({
                         "language": info.language,
                         "language_probability": round(float(info.language_probability), 3),
@@ -223,6 +293,32 @@ def main() -> int:
                         "urdu_text": text,
                         "status": "ok" if text else "silent_or_empty",
                     })
+                    if not text and path.suffix.lower() in {".ogg", ".opus"}:
+                        # Container-level corruption can make the demuxer
+                        # yield nothing although the Opus packets are fine.
+                        # Salvage-decode to a temp WAV (original untouched)
+                        # and try once more without VAD.
+                        import tempfile
+                        tmp = Path(tempfile.mkstemp(suffix=".wav")[1])
+                        try:
+                            salvaged = salvage_ogg_opus_to_wav(path, tmp)
+                            if salvaged >= 1.0:
+                                text2, seg2, info2 = _run_asr(model, str(tmp), language,
+                                                              args.beam_size, False)
+                                if text2:
+                                    rec.update({
+                                        "language": info2.language,
+                                        "language_probability": round(float(info2.language_probability), 3),
+                                        "duration_sec": round(salvaged, 2),
+                                        "segments": seg2,
+                                        "urdu_text": text2,
+                                        "status": "ok",
+                                        "decode_fallback": "manual Ogg/Opus packet extraction "
+                                                           "(standard demuxer rejected the file)",
+                                    })
+                                    text = text2
+                        finally:
+                            tmp.unlink(missing_ok=True)
                     if text:
                         by_md5[rec["md5"]] = rec
             except Exception as exc:  # never abort the whole batch for one file

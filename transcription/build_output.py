@@ -7,11 +7,14 @@ Merge Whisper result shards -> final deliverables:
   transcription/qc_report.txt                        (status / confidence / OOV / gaps per voice)
 
 Rules enforced here:
-  * Voices that already have a transcription in text_voices.docx are NOT
-    duplicated into the output files (they are listed in the QC report).
-  * Every audio file from --start onward gets exactly one entry; silent,
-    failed or missing results are written as [unclear] entries (never
-    silently skipped, never filled with invented text).
+  * Every audio file from --start onward gets exactly one entry, keyed by
+    its real filename; silent, failed or missing results are written as
+    [unclear] entries (never silently skipped, never invented text).
+  * text_voices.docx is read-only and never modified. NOTE: sample tests
+    (Voices 151/166) showed the .docx entry numbers in the MP3 range do
+    NOT match the same-numbered audio files' contents (the document's
+    paragraphs are offset), so docx entries are never used as a reason to
+    skip an audio file -- every file from 151 onward is transcribed here.
   * Nothing in Voices/ or text_voices.docx is read-write; both are read-only.
 """
 
@@ -26,7 +29,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from transliterate import Transliterator  # noqa: E402
-from transcribe import discover  # noqa: E402
+from transcribe import discover, md5_of  # noqa: E402
 
 
 def load_results(results_dir: Path) -> dict[int, dict]:
@@ -82,7 +85,7 @@ def main() -> int:
 
     scope = sorted(n for n in files if n >= args.start)
     already_in_doc = [n for n in scope if n in existing_voices]
-    targets = [n for n in scope if n not in existing_voices]
+    targets = list(scope)  # transcribe EVERY audio file >= start (see module docstring)
     max_voice = max(files) if files else 0
     missing_audio = [n for n in range(1, max_voice + 1) if n not in files]
 
@@ -93,8 +96,10 @@ def main() -> int:
         "Roman Urdu Transcriptions — Voice 151 onward",
         f"Generated: {now} | Engine: faster-whisper ({', '.join(model_names) or 'n/a'}) Urdu ASR "
         "+ dictionary transliteration learned from text_voices.docx",
-        "Note: Voices already transcribed in text_voices.docx are not repeated here "
-        f"({', '.join(map(str, already_in_doc)) or 'none'}). That document and all audio files are unchanged.",
+        "Note: text_voices.docx also contains entries numbered "
+        f"{', '.join(map(str, already_in_doc)) or 'none'}, but sample verification showed those entry "
+        "numbers do not match the same-numbered audio files in the MP3 range (offset), so every audio "
+        "file from 151 onward is transcribed here from the audio itself. The document and all audio files are unchanged.",
         "[unclear] marks recordings with no intelligible speech / no ASR result — see transcription/qc_report.txt.",
         "",
     ]
@@ -129,6 +134,8 @@ def main() -> int:
             oov_rate = info["oov_rate"]
             all_oov.update(dict(info["oov_top"]))
             notes = []
+            if n in existing_voices:
+                notes.append("docx has same-numbered entry (content differs from this audio; see header)")
             if rec.get("duplicate_of_voice"):
                 notes.append(f"byte-identical duplicate of Voice {rec['duplicate_of_voice']}")
             if oov_rate and oov_rate > 0.20:

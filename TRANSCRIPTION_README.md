@@ -28,7 +28,7 @@ Roman Urdu, preserving all existing work:
 | Formats | 1–125 `VOICE*.ogg` (Opus), 127–483 `Voice*.mp3`, 484–500 `VOICE*.ogg` (Opus); all mono 48 kHz, ≈45 s each, all decode cleanly |
 | Duplicates | **VOICE484–500.ogg are byte-identical copies of VOICE7–23.ogg** — detected by MD5, transcribed once, noted in the QC report |
 | Existing doc | `text_voices.docx`: 164 Urdu + Roman Urdu entries (Voices 1–162, 166, 167) |
-| Remaining work | **336 files**: Voices 163, 164, 165 and 168–500 |
+| Remaining work | **350 files**: every audio file Voice 151–500 (docx numbers 151–162/166/167 don't match these files — see above) |
 
 ## How it works
 
