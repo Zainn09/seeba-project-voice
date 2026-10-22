@@ -1,9 +1,16 @@
 name: Transcribe voices (Whisper Urdu ASR)
 
-# Manual batch speech-to-text. Each matrix job transcribes one chunk of
-# voice numbers into transcription/results/<shard>.jsonl; the collect job
-# commits all shards back to the branch this workflow was launched from.
+# Batch speech-to-text. Each matrix job transcribes one chunk of voice
+# numbers into transcription/results/<shard>.jsonl; the collect job commits
+# all shards back to the branch this workflow was launched from.
 # Originals in Voices/ and text_voices.docx are only ever read.
+#
+# How to start a run from a feature branch: edit
+# transcription/run_request.json and push (that file is the push trigger,
+# because workflow_dispatch requires this file to exist on the default
+# branch). Once merged to main, "Run workflow" (workflow_dispatch) also works.
+# The collect job only commits results/*.jsonl, which does not match the
+# trigger path, so runs never retrigger themselves.
 
 on:
   workflow_dispatch:
@@ -29,6 +36,9 @@ on:
       skip_existing:
         description: "Skip voices already transcribed in text_voices.docx (true/false)"
         default: "true"
+  push:
+    paths:
+      - "transcription/run_request.json"
 
 permissions:
   contents: write
@@ -42,30 +52,56 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       chunks: ${{ steps.plan.outputs.chunks }}
+      model: ${{ steps.plan.outputs.model }}
+      language: ${{ steps.plan.outputs.language }}
+      skip_existing: ${{ steps.plan.outputs.skip_existing }}
     steps:
+      - uses: actions/checkout@v4
       - id: plan
         env:
-          START: ${{ inputs.start }}
-          END: ${{ inputs.end }}
-          ONLY: ${{ inputs.only }}
-          CHUNK: ${{ inputs.chunk_size }}
+          EVENT: ${{ github.event_name }}
+          IN_MODEL: ${{ inputs.model }}
+          IN_START: ${{ inputs.start }}
+          IN_END: ${{ inputs.end }}
+          IN_ONLY: ${{ inputs.only }}
+          IN_CHUNK: ${{ inputs.chunk_size }}
+          IN_LANG: ${{ inputs.language }}
+          IN_SKIP: ${{ inputs.skip_existing }}
         run: |
           python3 - <<'PY'
           import json, os
-          only = os.environ.get("ONLY", "").strip()
-          if only:
-              chunks = [{"shard": "test_only", "only": only, "start": "", "end": ""}]
+          if os.environ["EVENT"] == "push":
+              req = json.load(open("transcription/run_request.json", encoding="utf-8"))
+              p = {"model": req.get("model", "small"), "start": int(req.get("start", 151)),
+                   "end": int(req.get("end", 500)), "only": (req.get("only") or "").strip(),
+                   "chunk_size": int(req.get("chunk_size", 42)),
+                   "language": req.get("language", "ur"),
+                   "skip_existing": str(req.get("skip_existing", True)).lower()}
+              print("Run request (push):", p, "| note:", req.get("note", ""))
           else:
-              start, end, size = int(os.environ["START"]), int(os.environ["END"]), int(os.environ["CHUNK"])
-              chunks = []
-              a = start
-              while a <= end:
-                  b = min(a + size - 1, end)
+              p = {"model": os.environ["IN_MODEL"] or "small",
+                   "start": int(os.environ["IN_START"] or 151),
+                   "end": int(os.environ["IN_END"] or 500),
+                   "only": (os.environ.get("IN_ONLY") or "").strip(),
+                   "chunk_size": int(os.environ["IN_CHUNK"] or 42),
+                   "language": os.environ["IN_LANG"] or "ur",
+                   "skip_existing": (os.environ["IN_SKIP"] or "true").lower()}
+              print("Run request (dispatch):", p)
+          if p["only"]:
+              shard = "test_only"
+              if os.environ["EVENT"] == "push":
+                  shard = json.load(open("transcription/run_request.json", encoding="utf-8")).get("shard") or shard
+              chunks = [{"shard": shard, "only": p["only"], "start": "", "end": ""}]
+          else:
+              chunks, a = [], p["start"]
+              while a <= p["end"]:
+                  b = min(a + p["chunk_size"] - 1, p["end"])
                   chunks.append({"shard": f"whisper_{a}_{b}", "only": "", "start": str(a), "end": str(b)})
                   a = b + 1
           with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
               fh.write(f"chunks={json.dumps(chunks)}\n")
-          print(chunks)
+              fh.write(f"model={p['model']}\nlanguage={p['language']}\nskip_existing={p['skip_existing']}\n")
+          print("Chunks:", chunks)
           PY
 
   transcribe:
@@ -87,13 +123,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: whisper-${{ inputs.model }}
+          key: whisper-${{ needs.plan.outputs.model }}
       - run: pip install -r requirements.txt
       - name: Transcribe chunk ${{ matrix.chunk.shard }}
         env:
-          MODEL: ${{ inputs.model }}
-          LANGUAGE: ${{ inputs.language }}
-          SKIP_EXISTING: ${{ inputs.skip_existing }}
+          MODEL: ${{ needs.plan.outputs.model }}
+          LANGUAGE: ${{ needs.plan.outputs.language }}
+          SKIP_EXISTING: ${{ needs.plan.outputs.skip_existing }}
           SHARD: ${{ matrix.chunk.shard }}
           ONLY: ${{ matrix.chunk.only }}
           START: ${{ matrix.chunk.start }}
@@ -126,7 +162,7 @@ jobs:
       - name: Commit result shards back to this branch
         env:
           BRANCH: ${{ github.ref_name }}
-          MODEL: ${{ inputs.model }}
+          MODEL: ${{ needs.plan.outputs.model }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

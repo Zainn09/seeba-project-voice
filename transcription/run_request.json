@@ -1,0 +1,11 @@
+{
+  "note": "TEST RUN: 151 and 166 have human transcriptions (accuracy check), 168 is new, 484 is an Ogg/Opus file (duplicate of Voice 7). Pushing a change to this file triggers .github/workflows/transcribe.yml.",
+  "model": "small",
+  "only": "151,166,168,484",
+  "shard": "test_small",
+  "start": 151,
+  "end": 500,
+  "chunk_size": 42,
+  "language": "ur",
+  "skip_existing": false
+}
