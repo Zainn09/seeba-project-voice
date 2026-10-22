@@ -55,6 +55,7 @@ jobs:
       model: ${{ steps.plan.outputs.model }}
       language: ${{ steps.plan.outputs.language }}
       skip_existing: ${{ steps.plan.outputs.skip_existing }}
+      no_vad: ${{ steps.plan.outputs.no_vad }}
     steps:
       - uses: actions/checkout@v4
       - id: plan

@@ -36,6 +36,9 @@ EXISTING_PATH = HERE / "existing_transcriptions.json"
 _DIACRITICS = re.compile(r"[\u064b-\u065f\u0670\u06d6-\u06ed]")
 _CHAR_FIX = str.maketrans({
     "ي": "ی", "ك": "ک", "ة": "ت", "ۀ": "ہ", "ؤ": "و",
+    # ASR often writes ئ where the document writes ی (e.g. لئے / لیے,
+    # روئیے / رویے); normalising merges those dictionary keys.
+    "ئ": "ی",
     "أ": "ا", "إ": "ا", "آ": "آ", "ـ": "", "‌": " ", "‍": "",
 })
 PUNCT_MAP = {"۔": ".", "،": ",", "؟": "?", "؛": ";", "：": ":", "«": '"', "»": '"',

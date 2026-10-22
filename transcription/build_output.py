@@ -68,6 +68,13 @@ def main() -> int:
     args = ap.parse_args()
 
     files = dict(discover(Path(args.voices_dir)))
+    # Byte-identical audio duplicates across the whole collection (e.g.
+    # VOICE484-500.ogg are copies of VOICE7-23.ogg) -- noted, never hidden.
+    by_md5: dict[str, list[int]] = {}
+    for _n, _p in files.items():
+        by_md5.setdefault(md5_of(_p), []).append(_n)
+    dup_of = {n: [m for m in group if m != n]
+              for group in by_md5.values() if len(group) > 1 for n in group}
     existing = json.loads(Path(args.existing_json).read_text(encoding="utf-8"))
     existing_voices = {int(k) for k, v in existing.items() if v.get("urdu") or v.get("roman")}
     results = load_results(Path(args.results_dir))

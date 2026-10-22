@@ -1,10 +1,12 @@
 {
-  "note": "FULL BATCH: every audio file Voice 151-500, large-v3 (test: ~90% Urdu word match vs 69% small). skip_existing=false because docx numbers in MP3 range do not match audio contents (verified 151/166). Test shards quarantined in results/tests/ so resume-pooling cannot skip files.",
+  "note": "RETRY Voice 499 only, without VAD (VAD returned empty although file is byte-identical to Voice 22 which has speech).",
   "model": "large-v3",
-  "only": "",
+  "only": "499",
+  "shard": "retry_499",
   "start": 151,
   "end": 500,
   "chunk_size": 39,
   "language": "ur",
-  "skip_existing": false
+  "skip_existing": false,
+  "no_vad": true
 }
