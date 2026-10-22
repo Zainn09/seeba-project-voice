@@ -163,7 +163,7 @@ def main() -> int:
         qc.append(f"{n} | {fname} | {status} | {dur} | {avg_logprob(rec) if rec else None} | "
                   f"{oov_rate} | {note}")
 
-    qc += ["", f"Status counts (new voices): {dict(counts)}",
+    qc += ["", f"Status counts (voices in output): {dict(counts)}",
            f"Voices flagged for human review: {sorted(set(review)) or 'none'}",
            "", "Most frequent out-of-vocabulary Urdu words in new transcripts "
            "(add reviewed spellings to transcription/manual_roman_overrides.json, then rebuild):"]

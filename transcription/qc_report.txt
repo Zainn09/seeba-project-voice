@@ -1,5 +1,5 @@
 Transcription QC report
-Generated: 2026-10-22 19:55 UTC
+Generated: 2026-10-22 20:03 UTC
 Audio files discovered: 499 (Voices 1..500; missing audio numbers: [126])
 Existing transcriptions in text_voices.docx: 164 (range 1..167; gaps: [163, 164, 165])
 Scope (>= 151, audio present): 350 | numbers that also exist in docx (content verified NOT to match on samples 151/166, still transcribed from audio): [151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 166, 167]
@@ -9,415 +9,415 @@ voice | file | status | duration_s | avg_logprob | oov_rate | note
 151 | Voice151.mp3 | ok | 45.01 | -0.067 | 0.0202 | docx has same-numbered entry (content differs from this audio; see header)
 152 | Voice152.mp3 | ok | 44.99 | -0.084 | 0.0721 | docx has same-numbered entry (content differs from this audio; see header)
 153 | Voice153.mp3 | ok | 44.99 | -0.105 | 0.0294 | docx has same-numbered entry (content differs from this audio; see header)
-154 | Voice154.mp3 | ok | 44.99 | -0.091 | 0.0566 | docx has same-numbered entry (content differs from this audio; see header)
-155 | Voice155.mp3 | ok | 44.99 | -0.085 | 0.06 | docx has same-numbered entry (content differs from this audio; see header)
-156 | Voice156.mp3 | ok | 44.99 | -0.124 | 0.1087 | docx has same-numbered entry (content differs from this audio; see header)
+154 | Voice154.mp3 | ok | 44.99 | -0.091 | 0.0472 | docx has same-numbered entry (content differs from this audio; see header)
+155 | Voice155.mp3 | ok | 44.99 | -0.085 | 0.05 | docx has same-numbered entry (content differs from this audio; see header)
+156 | Voice156.mp3 | ok | 44.99 | -0.124 | 0.0978 | docx has same-numbered entry (content differs from this audio; see header)
 157 | Voice157.mp3 | ok | 44.99 | -0.071 | 0.0278 | docx has same-numbered entry (content differs from this audio; see header)
 158 | Voice158.mp3 | ok | 44.99 | -0.089 | 0.0278 | docx has same-numbered entry (content differs from this audio; see header)
-159 | Voice159.mp3 | ok | 44.99 | -0.105 | 0.0631 | docx has same-numbered entry (content differs from this audio; see header)
-160 | Voice160.mp3 | ok | 44.99 | -0.122 | 0.0686 | docx has same-numbered entry (content differs from this audio; see header)
-161 | Voice161.mp3 | ok | 44.99 | -0.092 | 0.0648 | docx has same-numbered entry (content differs from this audio; see header)
+159 | Voice159.mp3 | ok | 44.99 | -0.105 | 0.0541 | docx has same-numbered entry (content differs from this audio; see header)
+160 | Voice160.mp3 | ok | 44.99 | -0.122 | 0.0588 | docx has same-numbered entry (content differs from this audio; see header)
+161 | Voice161.mp3 | ok | 44.99 | -0.092 | 0.037 | docx has same-numbered entry (content differs from this audio; see header)
 162 | Voice162.mp3 | ok | 44.99 | -0.092 | 0.0275 | docx has same-numbered entry (content differs from this audio; see header)
 163 | Voice163.mp3 | ok | 44.99 | -0.065 | 0.0734 | 
 164 | Voice164.mp3 | ok | 44.99 | -0.097 | 0.0481 | 
-165 | Voice165.mp3 | ok | 8.93 | -0.092 | 0.0714 | 
-166 | Voice166.mp3 | ok | 44.98 | -0.079 | 0.1901 | docx has same-numbered entry (content differs from this audio; see header)
+165 | Voice165.mp3 | ok | 8.93 | -0.092 | 0.0 | 
+166 | Voice166.mp3 | ok | 44.98 | -0.079 | 0.1818 | docx has same-numbered entry (content differs from this audio; see header)
 167 | Voice167.mp3 | ok | 44.99 | -0.068 | 0.0522 | docx has same-numbered entry (content differs from this audio; see header)
-168 | Voice168.mp3 | ok | 44.99 | -0.072 | 0.0821 | 
-169 | Voice169.mp3 | ok | 44.99 | -0.073 | 0.0746 | 
-170 | Voice170.mp3 | ok | 44.99 | -0.065 | 0.0897 | 
-171 | Voice171.mp3 | ok | 44.99 | -0.075 | 0.1103 | 
-172 | Voice172.mp3 | ok | 44.99 | -0.08 | 0.168 | 
-173 | Voice173.mp3 | ok | 44.99 | -0.084 | 0.1333 | 
-174 | Voice174.mp3 | ok | 44.99 | -0.08 | 0.2137 | high OOV — review Roman Urdu
+168 | Voice168.mp3 | ok | 44.99 | -0.072 | 0.0746 | 
+169 | Voice169.mp3 | ok | 44.99 | -0.073 | 0.0448 | 
+170 | Voice170.mp3 | ok | 44.99 | -0.065 | 0.0828 | 
+171 | Voice171.mp3 | ok | 44.99 | -0.075 | 0.0897 | 
+172 | Voice172.mp3 | ok | 44.99 | -0.08 | 0.16 | 
+173 | Voice173.mp3 | ok | 44.99 | -0.084 | 0.1 | 
+174 | Voice174.mp3 | ok | 44.99 | -0.08 | 0.1966 | 
 175 | Voice175.mp3 | ok | 44.99 | -0.091 | 0.0169 | 
 176 | Voice176.mp3 | ok | 44.99 | -0.069 | 0.0977 | 
 177 | Voice177.mp3 | ok | 44.99 | -0.093 | 0.1214 | 
-178 | Voice178.mp3 | ok | 44.99 | -0.064 | 0.0862 | 
+178 | Voice178.mp3 | ok | 44.99 | -0.064 | 0.0776 | 
 179 | Voice179.mp3 | ok | 44.99 | -0.073 | 0.087 | 
 180 | Voice180.mp3 | ok | 44.99 | -0.068 | 0.0759 | 
-181 | Voice181.mp3 | ok | 44.99 | -0.057 | 0.0616 | 
+181 | Voice181.mp3 | ok | 44.99 | -0.057 | 0.0548 | 
 182 | Voice182.mp3 | ok | 44.99 | -0.063 | 0.0405 | 
-183 | Voice183.mp3 | ok | 44.99 | -0.096 | 0.1756 | 
-184 | Voice184.mp3 | ok | 44.99 | -0.053 | 0.0362 | 
+183 | Voice183.mp3 | ok | 44.99 | -0.096 | 0.1527 | 
+184 | Voice184.mp3 | ok | 44.99 | -0.053 | 0.029 | 
 185 | Voice185.mp3 | ok | 44.99 | -0.058 | 0.0873 | 
 186 | Voice186.mp3 | ok | 44.99 | -0.075 | 0.0709 | 
-187 | Voice187.mp3 | ok | 44.99 | -0.095 | 0.0976 | 
-188 | Voice188.mp3 | ok | 44.99 | -0.085 | 0.1667 | 
-189 | Voice189.mp3 | ok | 44.99 | -0.065 | 0.0972 | 
+187 | Voice187.mp3 | ok | 44.99 | -0.095 | 0.0894 | 
+188 | Voice188.mp3 | ok | 44.99 | -0.085 | 0.1591 | 
+189 | Voice189.mp3 | ok | 44.99 | -0.065 | 0.0903 | 
 190 | Voice190.mp3 | ok | 44.99 | -0.07 | 0.1094 | 
 191 | Voice191.mp3 | ok | 44.99 | -0.073 | 0.0569 | 
 192 | Voice192.mp3 | ok | 44.99 | -0.067 | 0.084 | 
-193 | Voice193.mp3 | ok | 44.99 | -0.086 | 0.1387 | 
-194 | Voice194.mp3 | ok | 44.99 | -0.067 | 0.1597 | 
-195 | Voice195.mp3 | ok | 44.99 | -0.085 | 0.1103 | 
+193 | Voice193.mp3 | ok | 44.99 | -0.086 | 0.1241 | 
+194 | Voice194.mp3 | ok | 44.99 | -0.067 | 0.1176 | 
+195 | Voice195.mp3 | ok | 44.99 | -0.085 | 0.0956 | 
 196 | Voice196.mp3 | ok | 44.99 | -0.09 | 0.112 | 
 197 | Voice197.mp3 | ok | 44.99 | -0.056 | 0.0336 | 
 198 | Voice198.mp3 | ok | 44.99 | -0.076 | 0.0833 | 
-199 | Voice199.mp3 | ok | 44.99 | -0.072 | 0.0764 | 
-200 | Voice200.mp3 | ok | 44.99 | -0.056 | 0.2288 | high OOV — review Roman Urdu
+199 | Voice199.mp3 | ok | 44.99 | -0.072 | 0.0625 | 
+200 | Voice200.mp3 | ok | 44.99 | -0.056 | 0.178 | 
 201 | Voice201.mp3 | ok | 44.99 | -0.067 | 0.1597 | 
 202 | Voice202.mp3 | ok | 44.99 | -0.08 | 0.0559 | 
-203 | Voice203.mp3 | ok | 44.99 | -0.065 | 0.0714 | 
-204 | Voice204.mp3 | ok | 44.99 | -0.059 | 0.0596 | 
-205 | Voice205.mp3 | ok | 44.99 | -0.073 | 0.1613 | 
+203 | Voice203.mp3 | ok | 44.99 | -0.065 | 0.05 | 
+204 | Voice204.mp3 | ok | 44.99 | -0.059 | 0.0331 | 
+205 | Voice205.mp3 | ok | 44.99 | -0.073 | 0.129 | 
 206 | Voice206.mp3 | ok | 44.99 | -0.075 | 0.136 | 
 207 | Voice207.mp3 | ok | 44.99 | -0.086 | 0.2066 | high OOV — review Roman Urdu
 208 | Voice208.mp3 | ok | 44.99 | -0.109 | 0.1083 | 
-209 | Voice209.mp3 | ok | 44.99 | -0.08 | 0.0538 | 
+209 | Voice209.mp3 | ok | 44.99 | -0.08 | 0.0385 | 
 210 | Voice210.mp3 | ok | 44.99 | -0.06 | 0.0725 | 
 211 | Voice211.mp3 | ok | 44.99 | -0.074 | 0.1176 | 
-212 | Voice212.mp3 | ok | 44.99 | -0.08 | 0.1032 | 
+212 | Voice212.mp3 | ok | 44.99 | -0.08 | 0.0952 | 
 213 | Voice213.mp3 | ok | 44.99 | -0.081 | 0.0692 | 
 214 | Voice214.mp3 | ok | 44.99 | -0.086 | 0.0853 | 
 215 | Voice215.mp3 | ok | 44.99 | -0.076 | 0.1119 | 
-216 | Voice216.mp3 | ok | 44.99 | -0.081 | 0.1045 | 
+216 | Voice216.mp3 | ok | 44.99 | -0.081 | 0.097 | 
 217 | Voice217.mp3 | ok | 44.99 | -0.084 | 0.0556 | 
-218 | Voice218.mp3 | ok | 44.99 | -0.097 | 0.1172 | 
+218 | Voice218.mp3 | ok | 44.99 | -0.097 | 0.1094 | 
 219 | Voice219.mp3 | ok | 44.99 | -0.077 | 0.0472 | 
 220 | Voice220.mp3 | ok | 44.99 | -0.086 | 0.1168 | 
-221 | Voice221.mp3 | ok | 44.99 | -0.08 | 0.104 | 
+221 | Voice221.mp3 | ok | 44.99 | -0.08 | 0.08 | 
 222 | Voice222.mp3 | ok | 44.99 | -0.071 | 0.1042 | 
-223 | Voice223.mp3 | ok | 44.99 | -0.075 | 0.1371 | 
+223 | Voice223.mp3 | ok | 44.99 | -0.075 | 0.121 | 
 224 | Voice224.mp3 | ok | 44.99 | -0.074 | 0.163 | 
-225 | Voice225.mp3 | ok | 44.99 | -0.076 | 0.1825 | 
-226 | Voice226.mp3 | ok | 44.99 | -0.065 | 0.0667 | 
-227 | Voice227.mp3 | ok | 44.99 | -0.062 | 0.0385 | 
-228 | Voice228.mp3 | ok | 44.99 | -0.089 | 0.114 | 
-229 | Voice229.mp3 | ok | 44.99 | -0.065 | 0.1379 | 
+225 | Voice225.mp3 | ok | 44.99 | -0.076 | 0.1667 | 
+226 | Voice226.mp3 | ok | 44.99 | -0.065 | 0.0593 | 
+227 | Voice227.mp3 | ok | 44.99 | -0.062 | 0.0308 | 
+228 | Voice228.mp3 | ok | 44.99 | -0.089 | 0.1053 | 
+229 | Voice229.mp3 | ok | 44.99 | -0.065 | 0.131 | 
 230 | Voice230.mp3 | ok | 44.99 | -0.072 | 0.1667 | 
-231 | Voice231.mp3 | ok | 44.99 | -0.048 | 0.12 | 
-232 | Voice232.mp3 | ok | 44.99 | -0.064 | 0.1034 | 
-233 | Voice233.mp3 | ok | 44.99 | -0.073 | 0.0752 | 
-234 | Voice234.mp3 | ok | 44.99 | -0.07 | 0.1765 | 
+231 | Voice231.mp3 | ok | 44.99 | -0.048 | 0.112 | 
+232 | Voice232.mp3 | ok | 44.99 | -0.064 | 0.0897 | 
+233 | Voice233.mp3 | ok | 44.99 | -0.073 | 0.0602 | 
+234 | Voice234.mp3 | ok | 44.99 | -0.07 | 0.1503 | 
 235 | Voice235.mp3 | ok | 44.99 | -0.091 | 0.0625 | 
-236 | Voice236.mp3 | ok | 44.99 | -0.072 | 0.1232 | 
-237 | Voice237.mp3 | ok | 44.99 | -0.068 | 0.1208 | 
-238 | Voice238.mp3 | ok | 44.99 | -0.053 | 0.1042 | 
-239 | Voice239.mp3 | ok | 44.99 | -0.073 | 0.1212 | 
-240 | Voice240.mp3 | ok | 44.99 | -0.067 | 0.0746 | 
+236 | Voice236.mp3 | ok | 44.99 | -0.072 | 0.1159 | 
+237 | Voice237.mp3 | ok | 44.99 | -0.068 | 0.1141 | 
+238 | Voice238.mp3 | ok | 44.99 | -0.053 | 0.0903 | 
+239 | Voice239.mp3 | ok | 44.99 | -0.073 | 0.1136 | 
+240 | Voice240.mp3 | ok | 44.99 | -0.067 | 0.0522 | 
 241 | Voice241.mp3 | ok | 44.99 | -0.093 | 0.1705 | 
-242 | Voice242.mp3 | ok | 44.99 | -0.07 | 0.1739 | 
-243 | Voice243.mp3 | ok | 44.99 | -0.066 | 0.1348 | 
-244 | Voice244.mp3 | ok | 44.99 | -0.081 | 0.1862 | 
+242 | Voice242.mp3 | ok | 44.99 | -0.07 | 0.1667 | 
+243 | Voice243.mp3 | ok | 44.99 | -0.066 | 0.1135 | 
+244 | Voice244.mp3 | ok | 44.99 | -0.081 | 0.1793 | 
 245 | Voice245.mp3 | ok | 44.99 | -0.07 | 0.1212 | 
-246 | Voice246.mp3 | ok | 44.99 | -0.07 | 0.146 | 
+246 | Voice246.mp3 | ok | 44.99 | -0.07 | 0.1387 | 
 247 | Voice247.mp3 | ok | 44.99 | -0.083 | 0.1842 | 
-248 | Voice248.mp3 | ok | 44.99 | -0.075 | 0.1438 | 
-249 | Voice249.mp3 | ok | 44.99 | -0.063 | 0.1277 | 
-250 | Voice250.mp3 | ok | 44.99 | -0.071 | 0.1575 | 
-251 | Voice251.mp3 | ok | 44.99 | -0.076 | 0.1438 | 
-252 | Voice252.mp3 | ok | 44.99 | -0.096 | 0.1 | 
-253 | Voice253.mp3 | ok | 44.99 | -0.072 | 0.1022 | 
-254 | Voice254.mp3 | ok | 44.99 | -0.081 | 0.119 | 
-255 | Voice255.mp3 | ok | 44.99 | -0.071 | 0.1361 | 
-256 | Voice256.mp3 | ok | 44.99 | -0.053 | 0.0909 | 
-257 | Voice257.mp3 | ok | 44.99 | -0.07 | 0.0929 | 
-258 | Voice258.mp3 | ok | 44.99 | -0.085 | 0.2031 | high OOV — review Roman Urdu
-259 | Voice259.mp3 | ok | 44.99 | -0.063 | 0.0863 | 
+248 | Voice248.mp3 | ok | 44.99 | -0.075 | 0.1373 | 
+249 | Voice249.mp3 | ok | 44.99 | -0.063 | 0.0922 | 
+250 | Voice250.mp3 | ok | 44.99 | -0.071 | 0.137 | 
+251 | Voice251.mp3 | ok | 44.99 | -0.076 | 0.1046 | 
+252 | Voice252.mp3 | ok | 44.99 | -0.096 | 0.0769 | 
+253 | Voice253.mp3 | ok | 44.99 | -0.072 | 0.0876 | 
+254 | Voice254.mp3 | ok | 44.99 | -0.081 | 0.1111 | 
+255 | Voice255.mp3 | ok | 44.99 | -0.071 | 0.1293 | 
+256 | Voice256.mp3 | ok | 44.99 | -0.053 | 0.0769 | 
+257 | Voice257.mp3 | ok | 44.99 | -0.07 | 0.0857 | 
+258 | Voice258.mp3 | ok | 44.99 | -0.085 | 0.1641 | 
+259 | Voice259.mp3 | ok | 44.99 | -0.063 | 0.0791 | 
 260 | Voice260.mp3 | ok | 44.99 | -0.074 | 0.1231 | 
-261 | Voice261.mp3 | ok | 44.99 | -0.063 | 0.1185 | 
+261 | Voice261.mp3 | ok | 44.99 | -0.063 | 0.1037 | 
 262 | Voice262.mp3 | ok | 44.99 | -0.067 | 0.1145 | 
-263 | Voice263.mp3 | ok | 44.99 | -0.061 | 0.1343 | 
-264 | Voice264.mp3 | ok | 44.99 | -0.098 | 0.2677 | high OOV — review Roman Urdu
-265 | Voice265.mp3 | ok | 44.99 | -0.076 | 0.1679 | 
-266 | Voice266.mp3 | ok | 44.99 | -0.068 | 0.087 | 
-267 | Voice267.mp3 | ok | 44.99 | -0.104 | 0.25 | high OOV — review Roman Urdu
+263 | Voice263.mp3 | ok | 44.99 | -0.061 | 0.1194 | 
+264 | Voice264.mp3 | ok | 44.99 | -0.098 | 0.252 | high OOV — review Roman Urdu
+265 | Voice265.mp3 | ok | 44.99 | -0.076 | 0.1374 | 
+266 | Voice266.mp3 | ok | 44.99 | -0.068 | 0.0652 | 
+267 | Voice267.mp3 | ok | 44.99 | -0.104 | 0.2344 | high OOV — review Roman Urdu
 268 | Voice268.mp3 | ok | 44.99 | -0.071 | 0.2143 | high OOV — review Roman Urdu
-269 | Voice269.mp3 | ok | 44.99 | -0.072 | 0.2167 | high OOV — review Roman Urdu
-270 | Voice270.mp3 | ok | 44.99 | -0.111 | 0.2353 | high OOV — review Roman Urdu
-271 | Voice271.mp3 | ok | 44.99 | -0.089 | 0.1438 | 
+269 | Voice269.mp3 | ok | 44.99 | -0.072 | 0.2083 | high OOV — review Roman Urdu
+270 | Voice270.mp3 | ok | 44.99 | -0.111 | 0.2279 | high OOV — review Roman Urdu
+271 | Voice271.mp3 | ok | 44.99 | -0.089 | 0.1233 | 
 272 | Voice272.mp3 | ok | 44.99 | -0.092 | 0.176 | 
 273 | Voice273.mp3 | ok | 44.99 | -0.051 | 0.1151 | 
-274 | Voice274.mp3 | ok | 44.99 | -0.071 | 0.0719 | 
-275 | Voice275.mp3 | ok | 44.99 | -0.076 | 0.1156 | 
-276 | Voice276.mp3 | ok | 44.99 | -0.064 | 0.0816 | 
-277 | Voice277.mp3 | ok | 44.99 | -0.051 | 0.0855 | 
+274 | Voice274.mp3 | ok | 44.99 | -0.071 | 0.0647 | 
+275 | Voice275.mp3 | ok | 44.99 | -0.076 | 0.1088 | 
+276 | Voice276.mp3 | ok | 44.99 | -0.064 | 0.0544 | 
+277 | Voice277.mp3 | ok | 44.99 | -0.051 | 0.0769 | 
 278 | Voice278.mp3 | ok | 44.99 | -0.06 | 0.0915 | 
-279 | Voice279.mp3 | ok | 44.99 | -0.077 | 0.0522 | 
-280 | Voice280.mp3 | ok | 44.99 | -0.084 | 0.1504 | 
-281 | Voice281.mp3 | ok | 44.99 | -0.076 | 0.146 | 
-282 | Voice282.mp3 | ok | 44.99 | -0.076 | 0.168 | 
-283 | Voice283.mp3 | ok | 44.99 | -0.081 | 0.1739 | 
+279 | Voice279.mp3 | ok | 44.99 | -0.077 | 0.0448 | 
+280 | Voice280.mp3 | ok | 44.99 | -0.084 | 0.1429 | 
+281 | Voice281.mp3 | ok | 44.99 | -0.076 | 0.1314 | 
+282 | Voice282.mp3 | ok | 44.99 | -0.076 | 0.136 | 
+283 | Voice283.mp3 | ok | 44.99 | -0.081 | 0.1522 | 
 284 | Voice284.mp3 | ok | 44.99 | -0.068 | 0.1533 | 
-285 | Voice285.mp3 | ok | 44.99 | -0.072 | 0.2308 | high OOV — review Roman Urdu
-286 | Voice286.mp3 | ok | 44.99 | -0.061 | 0.2348 | high OOV — review Roman Urdu
-287 | Voice287.mp3 | ok | 44.99 | -0.071 | 0.1951 | 
-288 | Voice288.mp3 | ok | 44.99 | -0.051 | 0.2045 | high OOV — review Roman Urdu
-289 | Voice289.mp3 | ok | 44.99 | -0.066 | 0.08 | 
-290 | Voice290.mp3 | ok | 44.99 | -0.07 | 0.1148 | 
+285 | Voice285.mp3 | ok | 44.99 | -0.072 | 0.2077 | high OOV — review Roman Urdu
+286 | Voice286.mp3 | ok | 44.99 | -0.061 | 0.197 | 
+287 | Voice287.mp3 | ok | 44.99 | -0.071 | 0.187 | 
+288 | Voice288.mp3 | ok | 44.99 | -0.051 | 0.1364 | 
+289 | Voice289.mp3 | ok | 44.99 | -0.066 | 0.064 | 
+290 | Voice290.mp3 | ok | 44.99 | -0.07 | 0.1066 | 
 291 | Voice291.mp3 | ok | 44.99 | -0.087 | 0.0634 | 
-292 | Voice292.mp3 | ok | 44.99 | -0.073 | 0.1159 | 
-293 | Voice293.mp3 | ok | 44.99 | -0.065 | 0.1111 | 
+292 | Voice292.mp3 | ok | 44.99 | -0.073 | 0.1087 | 
+293 | Voice293.mp3 | ok | 44.99 | -0.065 | 0.1037 | 
 294 | Voice294.mp3 | ok | 44.99 | -0.065 | 0.1212 | 
-295 | Voice295.mp3 | ok | 44.99 | -0.077 | 0.123 | 
+295 | Voice295.mp3 | ok | 44.99 | -0.077 | 0.1148 | 
 296 | Voice296.mp3 | ok | 44.99 | -0.053 | 0.088 | 
-297 | Voice297.mp3 | ok | 44.99 | -0.066 | 0.124 | 
-298 | Voice298.mp3 | ok | 44.99 | -0.073 | 0.1138 | 
-299 | Voice299.mp3 | ok | 44.99 | -0.059 | 0.0616 | 
+297 | Voice297.mp3 | ok | 44.99 | -0.066 | 0.1157 | 
+298 | Voice298.mp3 | ok | 44.99 | -0.073 | 0.1057 | 
+299 | Voice299.mp3 | ok | 44.99 | -0.059 | 0.0548 | 
 300 | Voice300.mp3 | ok | 44.99 | -0.071 | 0.0909 | 
-301 | Voice301.mp3 | ok | 44.99 | -0.131 | 0.1296 | 
-302 | Voice302.mp3 | ok | 44.99 | -0.066 | 0.0775 | 
-303 | Voice303.mp3 | ok | 44.99 | -0.069 | 0.0667 | 
-304 | Voice304.mp3 | ok | 44.99 | -0.058 | 0.0699 | 
-305 | Voice305.mp3 | ok | 44.99 | -0.082 | 0.125 | 
-306 | Voice306.mp3 | ok | 44.99 | -0.089 | 0.1088 | 
+301 | Voice301.mp3 | ok | 44.99 | -0.131 | 0.1111 | 
+302 | Voice302.mp3 | ok | 44.99 | -0.066 | 0.0634 | 
+303 | Voice303.mp3 | ok | 44.99 | -0.069 | 0.037 | 
+304 | Voice304.mp3 | ok | 44.99 | -0.058 | 0.0559 | 
+305 | Voice305.mp3 | ok | 44.99 | -0.082 | 0.1103 | 
+306 | Voice306.mp3 | ok | 44.99 | -0.089 | 0.0952 | 
 307 | Voice307.mp3 | ok | 44.99 | -0.068 | 0.2051 | high OOV — review Roman Urdu
 308 | Voice308.mp3 | ok | 44.99 | -0.078 | 0.1972 | 
 309 | Voice309.mp3 | ok | 44.99 | -0.076 | 0.0784 | 
-310 | Voice310.mp3 | ok | 44.99 | -0.093 | 0.2366 | high OOV — review Roman Urdu
+310 | Voice310.mp3 | ok | 44.99 | -0.093 | 0.229 | high OOV — review Roman Urdu
 311 | Voice311.mp3 | ok | 44.99 | -0.077 | 0.1587 | 
-312 | Voice312.mp3 | ok | 44.99 | -0.053 | 0.0658 | 
-313 | Voice313.mp3 | ok | 44.99 | -0.055 | 0.0791 | 
-314 | Voice314.mp3 | ok | 44.99 | -0.058 | 0.0496 | 
-315 | Voice315.mp3 | ok | 44.99 | -0.082 | 0.0625 | 
-316 | Voice316.mp3 | ok | 44.99 | -0.05 | 0.0822 | 
-317 | Voice317.mp3 | ok | 44.99 | -0.061 | 0.0791 | 
-318 | Voice318.mp3 | ok | 44.99 | -0.091 | 0.1301 | 
-319 | Voice319.mp3 | ok | 44.99 | -0.084 | 0.1429 | 
-320 | Voice320.mp3 | ok | 44.99 | -0.072 | 0.216 | high OOV — review Roman Urdu
-321 | Voice321.mp3 | ok | 44.99 | -0.074 | 0.1318 | 
-322 | Voice322.mp3 | ok | 44.99 | -0.094 | 0.1016 | 
+312 | Voice312.mp3 | ok | 44.99 | -0.053 | 0.0592 | 
+313 | Voice313.mp3 | ok | 44.99 | -0.055 | 0.0719 | 
+314 | Voice314.mp3 | ok | 44.99 | -0.058 | 0.0284 | 
+315 | Voice315.mp3 | ok | 44.99 | -0.082 | 0.0486 | 
+316 | Voice316.mp3 | ok | 44.99 | -0.05 | 0.0753 | 
+317 | Voice317.mp3 | ok | 44.99 | -0.061 | 0.0719 | 
+318 | Voice318.mp3 | ok | 44.99 | -0.091 | 0.1164 | 
+319 | Voice319.mp3 | ok | 44.99 | -0.084 | 0.1128 | 
+320 | Voice320.mp3 | ok | 44.99 | -0.072 | 0.184 | 
+321 | Voice321.mp3 | ok | 44.99 | -0.074 | 0.124 | 
+322 | Voice322.mp3 | ok | 44.99 | -0.094 | 0.0859 | 
 323 | Voice323.mp3 | ok | 44.99 | -0.067 | 0.0806 | 
-324 | Voice324.mp3 | ok | 44.99 | -0.068 | 0.0741 | 
+324 | Voice324.mp3 | ok | 44.99 | -0.068 | 0.0519 | 
 325 | Voice325.mp3 | ok | 44.99 | -0.097 | 0.0938 | 
 326 | Voice326.mp3 | ok | 44.99 | -0.063 | 0.084 | 
 327 | Voice327.mp3 | ok | 44.99 | -0.058 | 0.136 | 
-328 | Voice328.mp3 | ok | 44.99 | -0.075 | 0.0534 | 
+328 | Voice328.mp3 | ok | 44.99 | -0.075 | 0.0458 | 
 329 | Voice329.mp3 | ok | 44.99 | -0.078 | 0.097 | 
 330 | Voice330.mp3 | ok | 44.99 | -0.07 | 0.1159 | 
-331 | Voice331.mp3 | ok | 44.99 | -0.053 | 0.084 | 
-332 | Voice332.mp3 | ok | 44.99 | -0.072 | 0.121 | 
+331 | Voice331.mp3 | ok | 44.99 | -0.053 | 0.0763 | 
+332 | Voice332.mp3 | ok | 44.99 | -0.072 | 0.1129 | 
 333 | Voice333.mp3 | ok | 44.99 | -0.076 | 0.0726 | 
-334 | Voice334.mp3 | ok | 44.99 | -0.082 | 0.089 | 
-335 | Voice335.mp3 | ok | 44.99 | -0.077 | 0.1908 | 
+334 | Voice334.mp3 | ok | 44.99 | -0.082 | 0.0822 | 
+335 | Voice335.mp3 | ok | 44.99 | -0.077 | 0.1832 | 
 336 | Voice336.mp3 | ok | 44.99 | -0.102 | 0.0593 | 
 337 | Voice337.mp3 | ok | 44.99 | -0.064 | 0.0493 | 
 338 | Voice338.mp3 | ok | 44.99 | -0.081 | 0.084 | 
 339 | Voice339.mp3 | ok | 44.99 | -0.086 | 0.0526 | 
-340 | Voice340.mp3 | ok | 44.99 | -0.069 | 0.1318 | 
-341 | Voice341.mp3 | ok | 44.99 | -0.071 | 0.1259 | 
+340 | Voice340.mp3 | ok | 44.99 | -0.069 | 0.1085 | 
+341 | Voice341.mp3 | ok | 44.99 | -0.071 | 0.1037 | 
 342 | Voice342.mp3 | ok | 44.99 | -0.062 | 0.036 | 
 343 | Voice343.mp3 | ok | 44.99 | -0.077 | 0.0571 | 
 344 | Voice344.mp3 | ok | 44.99 | -0.079 | 0.0647 | 
-345 | Voice345.mp3 | ok | 44.99 | -0.084 | 0.0769 | 
-346 | Voice346.mp3 | ok | 44.99 | -0.056 | 0.0714 | 
+345 | Voice345.mp3 | ok | 44.99 | -0.084 | 0.0692 | 
+346 | Voice346.mp3 | ok | 44.99 | -0.056 | 0.0643 | 
 347 | Voice347.mp3 | ok | 44.99 | -0.091 | 0.1064 | 
-348 | Voice348.mp3 | ok | 44.99 | -0.081 | 0.1724 | 
+348 | Voice348.mp3 | ok | 44.99 | -0.081 | 0.1655 | 
 349 | Voice349.mp3 | ok | 44.99 | -0.074 | 0.1972 | 
 350 | Voice350.mp3 | ok | 44.99 | -0.073 | 0.0719 | 
 351 | Voice351.mp3 | ok | 44.99 | -0.085 | 0.0902 | 
 352 | Voice352.mp3 | ok | 44.99 | -0.083 | 0.0846 | 
-353 | Voice353.mp3 | ok | 44.99 | -0.082 | 0.0845 | 
-354 | Voice354.mp3 | ok | 44.99 | -0.082 | 0.1328 | 
-355 | Voice355.mp3 | ok | 44.99 | -0.075 | 0.0943 | 
-356 | Voice356.mp3 | ok | 44.99 | -0.077 | 0.1367 | 
-357 | Voice357.mp3 | ok | 44.99 | -0.076 | 0.1418 | 
+353 | Voice353.mp3 | ok | 44.99 | -0.082 | 0.0775 | 
+354 | Voice354.mp3 | ok | 44.99 | -0.082 | 0.125 | 
+355 | Voice355.mp3 | ok | 44.99 | -0.075 | 0.0818 | 
+356 | Voice356.mp3 | ok | 44.99 | -0.077 | 0.1295 | 
+357 | Voice357.mp3 | ok | 44.99 | -0.076 | 0.1343 | 
 358 | Voice358.mp3 | ok | 44.99 | -0.07 | 0.049 | 
 359 | Voice359.mp3 | ok | 44.99 | -0.066 | 0.047 | 
 360 | Voice360.mp3 | ok | 44.99 | -0.061 | 0.12 | 
-361 | Voice361.mp3 | ok | 44.99 | -0.072 | 0.0698 | 
-362 | Voice362.mp3 | ok | 44.99 | -0.082 | 0.0759 | 
-363 | Voice363.mp3 | ok | 44.99 | -0.079 | 0.0963 | 
+361 | Voice361.mp3 | ok | 44.99 | -0.072 | 0.062 | 
+362 | Voice362.mp3 | ok | 44.99 | -0.082 | 0.069 | 
+363 | Voice363.mp3 | ok | 44.99 | -0.079 | 0.0889 | 
 364 | Voice364.mp3 | ok | 44.99 | -0.074 | 0.1269 | 
-365 | Voice365.mp3 | ok | 44.99 | -0.088 | 0.123 | 
-366 | Voice366.mp3 | ok | 44.99 | -0.079 | 0.1212 | 
-367 | Voice367.mp3 | ok | 44.99 | -0.077 | 0.0758 | 
+365 | Voice365.mp3 | ok | 44.99 | -0.088 | 0.1148 | 
+366 | Voice366.mp3 | ok | 44.99 | -0.079 | 0.1136 | 
+367 | Voice367.mp3 | ok | 44.99 | -0.077 | 0.0606 | 
 368 | Voice368.mp3 | ok | 44.99 | -0.071 | 0.0714 | 
 369 | Voice369.mp3 | ok | 44.99 | -0.075 | 0.0574 | 
-370 | Voice370.mp3 | ok | 44.99 | -0.09 | 0.1318 | 
+370 | Voice370.mp3 | ok | 44.99 | -0.09 | 0.124 | 
 371 | Voice371.mp3 | ok | 44.99 | -0.061 | 0.0258 | 
 372 | Voice372.mp3 | ok | 44.99 | -0.087 | 0.0943 | 
-373 | Voice373.mp3 | ok | 44.99 | -0.072 | 0.1103 | 
-374 | Voice374.mp3 | ok | 44.99 | -0.075 | 0.1508 | 
+373 | Voice373.mp3 | ok | 44.99 | -0.072 | 0.0897 | 
+374 | Voice374.mp3 | ok | 44.99 | -0.075 | 0.1429 | 
 375 | Voice375.mp3 | ok | 44.99 | -0.055 | 0.1277 | 
-376 | Voice376.mp3 | ok | 44.99 | -0.077 | 0.0634 | 
-377 | Voice377.mp3 | ok | 44.99 | -0.095 | 0.0851 | 
+376 | Voice376.mp3 | ok | 44.99 | -0.077 | 0.0493 | 
+377 | Voice377.mp3 | ok | 44.99 | -0.095 | 0.0638 | 
 378 | Voice378.mp3 | ok | 44.99 | -0.079 | 0.1154 | 
-379 | Voice379.mp3 | ok | 44.99 | -0.062 | 0.0701 | 
-380 | Voice380.mp3 | ok | 44.99 | -0.079 | 0.1042 | 
-381 | Voice381.mp3 | ok | 44.99 | -0.066 | 0.1259 | 
+379 | Voice379.mp3 | ok | 44.99 | -0.062 | 0.0637 | 
+380 | Voice380.mp3 | ok | 44.99 | -0.079 | 0.0903 | 
+381 | Voice381.mp3 | ok | 44.99 | -0.066 | 0.1119 | 
 382 | Voice382.mp3 | ok | 44.99 | -0.074 | 0.0405 | 
-383 | Voice383.mp3 | ok | 44.99 | -0.085 | 0.0922 | 
+383 | Voice383.mp3 | ok | 44.99 | -0.085 | 0.078 | 
 384 | Voice384.mp3 | ok | 44.99 | -0.067 | 0.0993 | 
 385 | Voice385.mp3 | ok | 44.99 | -0.056 | 0.0464 | 
-386 | Voice386.mp3 | ok | 44.99 | -0.074 | 0.0429 | 
-387 | Voice387.mp3 | ok | 44.99 | -0.071 | 0.1161 | 
+386 | Voice386.mp3 | ok | 44.99 | -0.074 | 0.0357 | 
+387 | Voice387.mp3 | ok | 44.99 | -0.071 | 0.0968 | 
 388 | Voice388.mp3 | ok | 44.99 | -0.086 | 0.0922 | 
-389 | Voice389.mp3 | ok | 44.99 | -0.091 | 0.1159 | 
+389 | Voice389.mp3 | ok | 44.99 | -0.091 | 0.087 | 
 390 | Voice390.mp3 | ok | 44.99 | -0.054 | 0.1314 | 
 391 | Voice391.mp3 | ok | 44.99 | -0.072 | 0.0839 | 
-392 | Voice392.mp3 | ok | 44.99 | -0.097 | 0.1574 | 
+392 | Voice392.mp3 | ok | 44.99 | -0.097 | 0.1481 | 
 393 | Voice393.mp3 | ok | 44.99 | -0.094 | 0.0815 | 
 394 | Voice394.mp3 | ok | 44.99 | -0.067 | 0.08 | 
 395 | Voice395.mp3 | ok | 44.99 | -0.079 | 0.0602 | 
 396 | Voice396.mp3 | ok | 44.99 | -0.069 | 0.0985 | 
-397 | Voice397.mp3 | ok | 44.99 | -0.113 | 0.187 | 
-398 | Voice398.mp3 | ok | 44.99 | -0.069 | 0.1583 | 
+397 | Voice397.mp3 | ok | 44.99 | -0.113 | 0.122 | 
+398 | Voice398.mp3 | ok | 44.99 | -0.069 | 0.1417 | 
 399 | Voice399.mp3 | ok | 44.99 | -0.085 | 0.1417 | 
-400 | Voice400.mp3 | ok | 44.99 | -0.105 | 0.1167 | 
-401 | Voice401.mp3 | ok | 44.99 | -0.064 | 0.1709 | 
+400 | Voice400.mp3 | ok | 44.99 | -0.105 | 0.1083 | 
+401 | Voice401.mp3 | ok | 44.99 | -0.064 | 0.1624 | 
 402 | Voice402.mp3 | ok | 44.99 | -0.085 | 0.1681 | 
 403 | Voice403.mp3 | ok | 44.99 | -0.085 | 0.1429 | 
-404 | Voice404.mp3 | ok | 44.99 | -0.074 | 0.0682 | 
+404 | Voice404.mp3 | ok | 44.99 | -0.074 | 0.0606 | 
 405 | Voice405.mp3 | ok | 44.99 | -0.071 | 0.029 | 
-406 | Voice406.mp3 | ok | 44.99 | -0.07 | 0.1538 | 
-407 | Voice407.mp3 | ok | 44.99 | -0.078 | 0.0732 | 
+406 | Voice406.mp3 | ok | 44.99 | -0.07 | 0.1385 | 
+407 | Voice407.mp3 | ok | 44.99 | -0.078 | 0.0569 | 
 408 | Voice408.mp3 | ok | 44.99 | -0.082 | 0.0889 | 
-409 | Voice409.mp3 | ok | 44.99 | -0.064 | 0.0809 | 
+409 | Voice409.mp3 | ok | 44.99 | -0.064 | 0.0662 | 
 410 | Voice410.mp3 | ok | 44.99 | -0.08 | 0.075 | 
 411 | Voice411.mp3 | ok | 44.99 | -0.072 | 0.0511 | 
-412 | Voice412.mp3 | ok | 44.99 | -0.08 | 0.0866 | 
+412 | Voice412.mp3 | ok | 44.99 | -0.08 | 0.063 | 
 413 | Voice413.mp3 | ok | 44.99 | -0.056 | 0.0764 | 
 414 | Voice414.mp3 | ok | 44.99 | -0.077 | 0.1397 | 
 415 | Voice415.mp3 | ok | 44.99 | -0.075 | 0.0652 | 
-416 | Voice416.mp3 | ok | 44.99 | -0.085 | 0.1462 | 
-417 | Voice417.mp3 | ok | 44.99 | -0.077 | 0.1742 | 
-418 | Voice418.mp3 | ok | 44.99 | -0.103 | 0.1667 | 
-419 | Voice419.mp3 | ok | 44.99 | -0.074 | 0.2256 | high OOV — review Roman Urdu
-420 | Voice420.mp3 | ok | 44.99 | -0.11 | 0.1917 | 
-421 | Voice421.mp3 | ok | 44.99 | -0.115 | 0.084 | 
-422 | Voice422.mp3 | ok | 44.99 | -0.063 | 0.0781 | 
-423 | Voice423.mp3 | ok | 44.99 | -0.057 | 0.1194 | 
-424 | Voice424.mp3 | ok | 44.99 | -0.081 | 0.1026 | 
-425 | Voice425.mp3 | ok | 44.99 | -0.072 | 0.203 | high OOV — review Roman Urdu
-426 | Voice426.mp3 | ok | 44.99 | -0.072 | 0.0909 | 
-427 | Voice427.mp3 | ok | 44.99 | -0.087 | 0.1056 | 
-428 | Voice428.mp3 | ok | 44.99 | -0.079 | 0.0725 | 
-429 | Voice429.mp3 | ok | 44.99 | -0.095 | 0.1013 | 
+416 | Voice416.mp3 | ok | 44.99 | -0.085 | 0.1308 | 
+417 | Voice417.mp3 | ok | 44.99 | -0.077 | 0.1364 | 
+418 | Voice418.mp3 | ok | 44.99 | -0.103 | 0.1508 | 
+419 | Voice419.mp3 | ok | 44.99 | -0.074 | 0.1729 | 
+420 | Voice420.mp3 | ok | 44.99 | -0.11 | 0.1833 | 
+421 | Voice421.mp3 | ok | 44.99 | -0.115 | 0.0763 | 
+422 | Voice422.mp3 | ok | 44.99 | -0.063 | 0.0703 | 
+423 | Voice423.mp3 | ok | 44.99 | -0.057 | 0.0896 | 
+424 | Voice424.mp3 | ok | 44.99 | -0.081 | 0.0769 | 
+425 | Voice425.mp3 | ok | 44.99 | -0.072 | 0.1805 | 
+426 | Voice426.mp3 | ok | 44.99 | -0.072 | 0.0606 | 
+427 | Voice427.mp3 | ok | 44.99 | -0.087 | 0.0986 | 
+428 | Voice428.mp3 | ok | 44.99 | -0.079 | 0.0652 | 
+429 | Voice429.mp3 | ok | 44.99 | -0.095 | 0.0886 | 
 430 | Voice430.mp3 | ok | 44.99 | -0.079 | 0.102 | 
 431 | Voice431.mp3 | ok | 44.99 | -0.067 | 0.0889 | 
-432 | Voice432.mp3 | ok | 44.99 | -0.098 | 0.1736 | 
+432 | Voice432.mp3 | ok | 44.99 | -0.098 | 0.1488 | 
 433 | Voice433.mp3 | ok | 44.99 | -0.063 | 0.1702 | 
-434 | Voice434.mp3 | ok | 44.99 | -0.092 | 0.1511 | 
-435 | Voice435.mp3 | ok | 44.99 | -0.095 | 0.2256 | high OOV — review Roman Urdu
+434 | Voice434.mp3 | ok | 44.99 | -0.092 | 0.1439 | 
+435 | Voice435.mp3 | ok | 44.99 | -0.095 | 0.203 | high OOV — review Roman Urdu
 436 | Voice436.mp3 | ok | 44.99 | -0.07 | 0.1579 | 
-437 | Voice437.mp3 | ok | 44.99 | -0.069 | 0.2409 | high OOV — review Roman Urdu
+437 | Voice437.mp3 | ok | 44.99 | -0.069 | 0.2263 | high OOV — review Roman Urdu
 438 | Voice438.mp3 | ok | 44.99 | -0.095 | 0.1484 | 
-439 | Voice439.mp3 | ok | 44.99 | -0.08 | 0.2283 | high OOV — review Roman Urdu
-440 | Voice440.mp3 | ok | 44.99 | -0.086 | 0.1603 | 
+439 | Voice439.mp3 | ok | 44.99 | -0.08 | 0.2126 | high OOV — review Roman Urdu
+440 | Voice440.mp3 | ok | 44.99 | -0.086 | 0.1374 | 
 441 | Voice441.mp3 | ok | 44.99 | -0.065 | 0.0909 | 
-442 | Voice442.mp3 | ok | 44.99 | -0.076 | 0.0533 | 
-443 | Voice443.mp3 | ok | 44.99 | -0.087 | 0.0956 | 
-444 | Voice444.mp3 | ok | 44.99 | -0.059 | 0.0671 | 
+442 | Voice442.mp3 | ok | 44.99 | -0.076 | 0.0467 | 
+443 | Voice443.mp3 | ok | 44.99 | -0.087 | 0.0809 | 
+444 | Voice444.mp3 | ok | 44.99 | -0.059 | 0.0537 | 
 445 | Voice445.mp3 | ok | 44.99 | -0.06 | 0.073 | 
 446 | Voice446.mp3 | ok | 44.99 | -0.099 | 0.1288 | 
 447 | Voice447.mp3 | ok | 44.99 | -0.062 | 0.1151 | 
-448 | Voice448.mp3 | ok | 44.99 | -0.071 | 0.1121 | 
-449 | Voice449.mp3 | ok | 44.99 | -0.101 | 0.2137 | high OOV — review Roman Urdu
+448 | Voice448.mp3 | ok | 44.99 | -0.071 | 0.1034 | 
+449 | Voice449.mp3 | ok | 44.99 | -0.101 | 0.1908 | 
 450 | Voice450.mp3 | ok | 44.99 | -0.095 | 0.1527 | 
-451 | Voice451.mp3 | ok | 44.99 | -0.082 | 0.1061 | 
+451 | Voice451.mp3 | ok | 44.99 | -0.082 | 0.0909 | 
 452 | Voice452.mp3 | ok | 44.99 | -0.095 | 0.124 | 
-453 | Voice453.mp3 | ok | 44.99 | -0.075 | 0.178 | 
+453 | Voice453.mp3 | ok | 44.99 | -0.075 | 0.1695 | 
 454 | Voice454.mp3 | ok | 44.99 | -0.098 | 0.1417 | 
 455 | Voice455.mp3 | ok | 44.99 | -0.077 | 0.186 | 
-456 | Voice456.mp3 | ok | 44.99 | -0.07 | 0.1679 | 
+456 | Voice456.mp3 | ok | 44.99 | -0.07 | 0.1387 | 
 457 | Voice457.mp3 | ok | 44.99 | -0.054 | 0.0803 | 
-458 | Voice458.mp3 | ok | 44.99 | -0.077 | 0.1197 | 
-459 | Voice459.mp3 | ok | 44.99 | -0.084 | 0.0797 | 
-460 | Voice460.mp3 | ok | 44.99 | -0.085 | 0.0974 | 
-461 | Voice461.mp3 | ok | 44.99 | -0.087 | 0.1022 | 
+458 | Voice458.mp3 | ok | 44.99 | -0.077 | 0.1127 | 
+459 | Voice459.mp3 | ok | 44.99 | -0.084 | 0.0725 | 
+460 | Voice460.mp3 | ok | 44.99 | -0.085 | 0.0844 | 
+461 | Voice461.mp3 | ok | 44.99 | -0.087 | 0.0949 | 
 462 | Voice462.mp3 | ok | 44.99 | -0.09 | 0.0861 | 
-463 | Voice463.mp3 | ok | 44.99 | -0.057 | 0.0927 | 
-464 | Voice464.mp3 | ok | 44.99 | -0.072 | 0.1357 | 
-465 | Voice465.mp3 | ok | 44.99 | -0.07 | 0.0903 | 
-466 | Voice466.mp3 | ok | 44.99 | -0.068 | 0.1064 | 
+463 | Voice463.mp3 | ok | 44.99 | -0.057 | 0.0795 | 
+464 | Voice464.mp3 | ok | 44.99 | -0.072 | 0.1214 | 
+465 | Voice465.mp3 | ok | 44.99 | -0.07 | 0.0764 | 
+466 | Voice466.mp3 | ok | 44.99 | -0.068 | 0.0993 | 
 467 | Voice467.mp3 | ok | 44.99 | -0.083 | 0.1597 | 
-468 | Voice468.mp3 | ok | 44.99 | -0.054 | 0.0909 | 
-469 | Voice469.mp3 | ok | 44.99 | -0.064 | 0.1214 | 
-470 | Voice470.mp3 | ok | 44.99 | -0.068 | 0.1298 | 
+468 | Voice468.mp3 | ok | 44.99 | -0.054 | 0.0769 | 
+469 | Voice469.mp3 | ok | 44.99 | -0.064 | 0.0929 | 
+470 | Voice470.mp3 | ok | 44.99 | -0.068 | 0.1221 | 
 471 | Voice471.mp3 | ok | 44.99 | -0.079 | 0.1462 | 
 472 | Voice472.mp3 | ok | 44.99 | -0.082 | 0.2283 | high OOV — review Roman Urdu
 473 | Voice473.mp3 | ok | 44.99 | -0.07 | 0.0923 | 
-474 | Voice474.mp3 | ok | 44.99 | -0.093 | 0.1111 | 
+474 | Voice474.mp3 | ok | 44.99 | -0.093 | 0.0909 | 
 475 | Voice475.mp3 | ok | 44.99 | -0.083 | 0.2407 | high OOV — review Roman Urdu
-476 | Voice476.mp3 | ok | 44.99 | -0.086 | 0.1654 | 
+476 | Voice476.mp3 | ok | 44.99 | -0.086 | 0.1579 | 
 477 | Voice477.mp3 | ok | 44.99 | -0.084 | 0.0769 | 
-478 | Voice478.mp3 | ok | 44.99 | -0.073 | 0.1181 | 
-479 | Voice479.mp3 | ok | 44.99 | -0.072 | 0.126 | 
-480 | Voice480.mp3 | ok | 44.99 | -0.061 | 0.1308 | 
-481 | Voice481.mp3 | ok | 44.99 | -0.097 | 0.0859 | 
+478 | Voice478.mp3 | ok | 44.99 | -0.073 | 0.0945 | 
+479 | Voice479.mp3 | ok | 44.99 | -0.072 | 0.0866 | 
+480 | Voice480.mp3 | ok | 44.99 | -0.061 | 0.1231 | 
+481 | Voice481.mp3 | ok | 44.99 | -0.097 | 0.0781 | 
 482 | Voice482.mp3 | ok | 44.99 | -0.084 | 0.0744 | 
 483 | Voice483.mp3 | ok | 35.28 | -0.074 | 0.0984 | 
-484 | VOICE484.ogg | ok | 41.47 | -0.078 | 0.0496 | 
-485 | VOICE485.ogg | ok | 45.55 | -0.104 | 0.073 | 
-486 | VOICE486.ogg | ok | 43.03 | -0.1 | 0.0821 | 
-487 | VOICE487.ogg | ok | 40.33 | -0.077 | 0.0217 | 
-488 | VOICE488.ogg | ok | 42.39 | -0.064 | 0.037 | 
-489 | VOICE489.ogg | ok | 42.83 | -0.1 | 0.0552 | 
-490 | VOICE490.ogg | ok | 43.41 | -0.076 | 0.0136 | 
-491 | VOICE491.ogg | ok | 46.23 | -0.088 | 0.0496 | 
-492 | VOICE492.ogg | ok | 48.67 | -0.1 | 0.0377 | 
-493 | VOICE493.ogg | ok | 50.05 | -0.083 | 0.0488 | 
-494 | VOICE494.ogg | ok | 46.11 | -0.104 | 0.0479 | 
-495 | VOICE495.ogg | ok | 47.41 | -0.088 | 0.0503 | 
-496 | VOICE496.ogg | ok | 46.87 | -0.076 | 0.0449 | 
-497 | VOICE497.ogg | ok | 47.51 | -0.077 | 0.0526 | 
-498 | VOICE498.ogg | ok | 46.43 | -0.074 | 0.0493 | 
-499 | VOICE499.ogg | silent_or_empty | 0.0 | None | None | no speech recognised
-500 | VOICE500.ogg | ok | 55.91 | -0.059 | 0.0068 | 
+484 | VOICE484.ogg | ok | 41.47 | -0.078 | 0.0496 | audio byte-identical to Voice 7 (same MD5)
+485 | VOICE485.ogg | ok | 45.55 | -0.104 | 0.073 | audio byte-identical to Voice 8 (same MD5)
+486 | VOICE486.ogg | ok | 43.03 | -0.1 | 0.0746 | audio byte-identical to Voice 9 (same MD5)
+487 | VOICE487.ogg | ok | 40.33 | -0.077 | 0.0217 | audio byte-identical to Voice 10 (same MD5)
+488 | VOICE488.ogg | ok | 42.39 | -0.064 | 0.037 | audio byte-identical to Voice 11 (same MD5)
+489 | VOICE489.ogg | ok | 42.83 | -0.1 | 0.0552 | audio byte-identical to Voice 12 (same MD5)
+490 | VOICE490.ogg | ok | 43.41 | -0.076 | 0.0136 | audio byte-identical to Voice 13 (same MD5)
+491 | VOICE491.ogg | ok | 46.23 | -0.088 | 0.0496 | audio byte-identical to Voice 14 (same MD5)
+492 | VOICE492.ogg | ok | 48.67 | -0.1 | 0.0377 | audio byte-identical to Voice 15 (same MD5)
+493 | VOICE493.ogg | ok | 50.05 | -0.083 | 0.0488 | audio byte-identical to Voice 16 (same MD5)
+494 | VOICE494.ogg | ok | 46.11 | -0.104 | 0.0479 | audio byte-identical to Voice 17 (same MD5)
+495 | VOICE495.ogg | ok | 47.41 | -0.088 | 0.0503 | audio byte-identical to Voice 18 (same MD5)
+496 | VOICE496.ogg | ok | 46.87 | -0.076 | 0.0449 | audio byte-identical to Voice 19 (same MD5)
+497 | VOICE497.ogg | ok | 47.51 | -0.077 | 0.0461 | audio byte-identical to Voice 20 (same MD5)
+498 | VOICE498.ogg | ok | 46.43 | -0.074 | 0.0493 | audio byte-identical to Voice 21 (same MD5)
+499 | VOICE499.ogg | ok | 50.71 | -0.1 | 0.0345 | audio byte-identical to Voice 22 (same MD5); container corrupt; transcribed via fallback: manual Ogg/Opus packet extraction (standard demuxer rejected the file)
+500 | VOICE500.ogg | ok | 55.91 | -0.059 | 0.0068 | audio byte-identical to Voice 23 (same MD5)
 
-Status counts (new voices): {'ok': 349, 'silent_or_empty': 1}
-Voices flagged for human review: [174, 200, 207, 258, 264, 267, 268, 269, 270, 285, 286, 288, 307, 310, 320, 419, 425, 435, 437, 439, 449, 472, 475]
+Status counts (voices in output): {'ok': 350}
+Voices flagged for human review: [207, 264, 267, 268, 269, 270, 285, 307, 310, 435, 437, 439, 472, 475]
 
 Most frequent out-of-vocabulary Urdu words in new transcripts (add reviewed spellings to transcription/manual_roman_overrides.json, then rebuild):
-  عظم: 19
   کار: 14
-  روییے: 11
-  انتہایی: 10
   اہد: 10
-  باب: 8
-  فلموں: 8
-  سیلز: 8
-  کوششوں: 8
-  راضی: 8
-  برونو: 8
-  ٹوم: 8
-  راحت: 8
-  مذبت: 8
-  بتانے: 8
-  ڈوٹی: 8
-  بدلیں: 7
-  طویل: 7
-  افسردہ: 7
-  وزن: 7
-  پیٹ: 7
-  ناممکن: 7
-  ٹی: 7
-  وی: 7
-  علاوہ: 7
-  لطف: 7
-  سوچیے: 7
-  برایے: 7
-  شو: 7
-  دوپیر: 7
-  والدین: 7
-  ہفتوں: 7
-  فتح: 7
-  اہل: 7
-  حصولوں: 7
-  متوجہ: 7
-  اجازت: 7
-  واقف: 7
-  مطلوبہ: 7
-  ماضی: 7
-  پوزیشن: 7
-  امداد: 7
-  ایلیس: 7
-  سخت: 7
-  لکھنے: 7
   رول: 7
   لاین: 7
-  پرنٹر: 7
-  ساتھی: 7
   جم: 7
-  زون: 7
-  سٹیو: 7
-  نایاب: 7
-  گلتی: 6
-  کہنا: 6
-  حق: 6
-  جذباتی: 6
-  عقاید: 6
-  میار: 6
-  بدقسمتی: 6
+  نپولین: 6
+  ہل: 6
+  گہری: 6
+  لکھا: 6
+  شاپ: 6
+  سیم: 6
+  حالت: 6
+  گزارتے: 6
+  بتاتا: 6
+  موت: 6
+  ردیعمل: 6
+  پانے: 6
+  جایزہ: 6
+  صورت: 6
+  اقدام: 6
+  ٹیپ: 6
+  مالک: 6
+  مجبور: 6
+  شرط: 6
+  خلاف: 6
+  بننا: 6
+  شہوری: 6
+  مختصر: 6
+  سکرین: 6
+  برپور: 6
+  خدمات: 6
+  ملین: 6
+  انجام: 6
+  بمپر: 6
+  قابو: 6
+  پرعظم: 6
+  استقامت: 6
+  عہد: 6
+  بولڈوکسی: 6
+  جلد: 6
+  تباہ: 6
+  پوچھتا: 6
+  چوٹی: 6
+  شکر: 6
+  آلہ: 6
+  جین: 6
+  پہرست: 6
+  جملے: 6
+  پرورش: 6
+  گانے: 6
+  میدان: 6
+  نیٹوکنگ: 6
+  کیلیے: 5
+  روحانی: 5
+  کورس: 5
+  خروش: 5
+  محرک: 5
+  رابرٹ: 5
+  تصورات: 5
+  مرہ: 5

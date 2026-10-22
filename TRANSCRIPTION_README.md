@@ -69,6 +69,36 @@ Roman Urdu, preserving all existing work:
 that recording — it is never used to hide a skipped file; the QC report
 states the exact status per voice.
 
+## Results of the completed run (2026-10-22)
+
+Model selection was tested before the full batch on voices whose human
+transcriptions are known to match the audio 1:1 (Voices 1, 2 and 484=7):
+
+| Model | Urdu word-match vs human | Time per 45 s file |
+|---|---|---|
+| Whisper `small` | 69% | ~15 s |
+| **Whisper `large-v3` (chosen)** | **89–92%** | ~38 s |
+
+Final batch: **350 / 350 voices (151–500) transcribed successfully, 0
+failures, 0 silent, nothing left unprocessed.** Cross-check on the
+duplicated files 485–500 against their human docx transcripts (entries
+9–24): 80–95% word containment. Median ASR confidence (avg logprob)
+−0.08; median Roman-Urdu out-of-vocabulary rate after two reviewed
+override rounds: 9%. Fourteen voices with >20% OOV (unusual vocabulary /
+names) are flagged for human review in `transcription/qc_report.txt` —
+their text is present, just worth a spelling pass.
+
+One file needed special handling: `VOICE499.ogg` (and its byte-identical
+twin `VOICE22.ogg`) is container-corrupt — standard demuxers reject it,
+but every Opus packet is intact. `transcribe.py` therefore includes a
+salvage fallback that extracts Opus packets manually and transcribes the
+recovered audio (50.7 s recovered; the QC report flags the method used).
+
+Also worth knowing: from around Voice 166 onward the MP3s are 45-second
+slices of a longer Urdu audiobook recording (Jeff Keller, "Attitude Is
+Everything"), so most entries begin/end mid-sentence — this is the audio
+as recorded, transcribed as-is per file.
+
 ## Running it
 
 ### Option A — GitHub Actions (what was used here; no local GPU/setup)
