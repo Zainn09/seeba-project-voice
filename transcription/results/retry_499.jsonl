@@ -1,0 +1,1 @@
+{"voice": 499, "filename": "VOICE499.ogg", "model": "large-v3", "engine": "faster-whisper", "created_utc": "2026-10-22T19:55:12+00:00", "md5": "a8521d8ac6d5fc9d757f1a51acf6d1fd", "language": "ur", "language_probability": 1.0, "duration_sec": 0.0, "segments": [], "urdu_text": "", "status": "silent_or_empty", "elapsed_sec": 0.03}
