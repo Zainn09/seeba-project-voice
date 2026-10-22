@@ -137,7 +137,11 @@ def main() -> int:
             if n in existing_voices:
                 notes.append("docx has same-numbered entry (content differs from this audio; see header)")
             if rec.get("duplicate_of_voice"):
-                notes.append(f"byte-identical duplicate of Voice {rec['duplicate_of_voice']}")
+                notes.append(f"transcription reused from byte-identical Voice {rec['duplicate_of_voice']}")
+            elif n in dup_of:
+                notes.append(f"audio byte-identical to Voice {', '.join(map(str, dup_of[n]))} (same MD5)")
+            if rec.get("decode_fallback"):
+                notes.append(f"container corrupt; transcribed via fallback: {rec['decode_fallback']}")
             if oov_rate and oov_rate > 0.20:
                 notes.append("high OOV — review Roman Urdu")
                 review.append(n)

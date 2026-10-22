@@ -1,12 +1,12 @@
 {
-  "note": "RETRY Voice 499 only, without VAD (VAD returned empty although file is byte-identical to Voice 22 which has speech).",
+  "note": "RETRY Voice 499 with Ogg/Opus container salvage (demuxer rejects file; packets intact, 50.7s salvaged locally).",
   "model": "large-v3",
   "only": "499",
-  "shard": "retry_499",
+  "shard": "retry_499_salvage",
   "start": 151,
   "end": 500,
   "chunk_size": 39,
   "language": "ur",
   "skip_existing": false,
-  "no_vad": true
+  "no_vad": false
 }
