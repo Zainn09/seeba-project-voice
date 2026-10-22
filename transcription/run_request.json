@@ -1,8 +1,8 @@
 {
-  "note": "TEST RUN: 151 and 166 have human transcriptions (accuracy check), 168 is new, 484 is an Ogg/Opus file (duplicate of Voice 7). Pushing a change to this file triggers .github/workflows/transcribe.yml.",
-  "model": "small",
-  "only": "151,166,168,484",
-  "shard": "test_small",
+  "note": "MODEL TEST large-v3: Voices 1,2,484 have verified 1:1 human transcripts in docx (ground truth). 151/167/168 eyeball + numbering check. Compare with test_small.jsonl.",
+  "model": "large-v3",
+  "only": "1,2,151,167,168,484",
+  "shard": "test_large",
   "start": 151,
   "end": 500,
   "chunk_size": 42,
